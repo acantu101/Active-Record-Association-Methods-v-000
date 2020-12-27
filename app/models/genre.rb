@@ -1,7 +1,7 @@
 class Genre < ActiveRecord::Base
   has_many :songs
   has_many :artists, through: :songs
-
+  ALL = []
   def song_count
     # return the number of songs in a genre
     self.songs.count
@@ -13,7 +13,7 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    all = []
+
     self.artists.each do |n|
       all < n.name
     end
