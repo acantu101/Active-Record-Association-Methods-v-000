@@ -1,11 +1,7 @@
 class Artist < ActiveRecord::Base
   has_many :songs
   has_many :genres, through: :songs
-@@all =[]
 
-  def self.save
-    @@all < self
-  end
   def get_genre_of_first_song
     #return the genre of the artist's first saved song
     self.genres.first
