@@ -13,7 +13,7 @@ class Song < ActiveRecord::Base
     self.artist = Artist.new(name: "Drake")
     if Artist.where(name: 'Drake').exists? == false
       Artist.find_or_create_by(name: 'Drake')
-
+end
 
   end
 end
